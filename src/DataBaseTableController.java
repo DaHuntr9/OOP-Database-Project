@@ -1,3 +1,4 @@
+// Import Statements
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,30 +15,34 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class DBTableController {
+/**
+ * Programmer Name: Hunter Danielson
+ * Date Created:11/19/2018
+ * Description of file: This File is the Controller for DBTable.fxml file. This controller
+ * establishes connection and queries the SQL database in the lib folder called books.
+ * It then creates tables in the DBTable.fxml file and sends the information to the cells of
+ * these columns.
+ */
+
+public class DataBaseTableController {
 
   @FXML
   private TableView<?> tableView;
-
-  @FXML
   private TableColumn[] tableColumns;
-
-  @FXML
   private ObservableList observableList = FXCollections.observableArrayList();
 
   @FXML
   private void initialize() {
-    String DATABASE_URL = "jdbc:derby:lib\\books";
-    String SELECT_QUERY = "SELECT authorID, firstName, lastName FROM authors";
+    String databaseUrl = "jdbc:derby:lib\\books";
+    String selectQuery = "SELECT authorID, firstName, lastName FROM authors";
     /**
      * This code will establish connection to the database.
      * The code is provided by Oracle in their Database tutorial in Chapter 24.
      */
     try (
-        Connection connection = DriverManager.getConnection(
-            DATABASE_URL, "deitel", "deitel");
+        Connection connection = DriverManager.getConnection(databaseUrl, "deitel", "deitel");
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(SELECT_QUERY)) {
+        ResultSet resultSet = statement.executeQuery(selectQuery)) {
       // get ResultSet's meta data
       ResultSetMetaData metaData = resultSet.getMetaData();
       int numberOfColumns = metaData.getColumnCount();
@@ -73,35 +78,35 @@ public class DBTableController {
         }
       }
       //This associates the cells with their columns.
-      tableColumns[0].setCellValueFactory(new PropertyValueFactory<>("authorID"));
+      tableColumns[0].setCellValueFactory(new PropertyValueFactory<>("authorId"));
       tableColumns[1].setCellValueFactory(new PropertyValueFactory<>("firstName"));
       tableColumns[2].setCellValueFactory(new PropertyValueFactory<>("lastName"));
       //this sets the Table's items to the observableList Array list and allows you to see them.
       tableView.setItems(observableList);
-    }// AutoCloseable objects' close methods are called now
-    catch (SQLException sqlException) {
+    } catch (SQLException sqlException) {
       //prints the SQL exception.
       sqlException.printStackTrace();
     }
-  }// end class DisplayAuthors
+  }
+  // end class DisplayAuthors
 
   @FXML
-  private void SelectAuthorID(ActionEvent event) throws IOException {
+  private void selectAuthorId(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
   }
 
   @FXML
-  private void SelectFirstName(ActionEvent event) throws IOException {
+  private void selectFirstName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
   }
 
   @FXML
-  private void SelectLastName(ActionEvent event) throws IOException {
+  private void selectLastName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
   }
 
   @FXML
-  private void SelectAllCheckBoxes(ActionEvent event) throws IOException {
+  private void selectAllCheckBoxes(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
   }
 }
