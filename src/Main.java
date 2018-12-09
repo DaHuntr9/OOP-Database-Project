@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+  private static Stage primaryStage;
+
   public static void main(String[] args) {
     launch(args);
   }
@@ -20,11 +22,20 @@ public class Main extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
+    setPrimaryStage(primaryStage);
     Parent root = FXMLLoader.load(getClass().getResource("DBTable.fxml"));
     primaryStage.setTitle("Data Base Application");
     //sets scene size
-    primaryStage.setScene(new Scene(root, 600, 400));
+    primaryStage.setScene(new Scene(root, 600, 440));
     //displays stage
     primaryStage.show();
+  }
+
+  private void setPrimaryStage(Stage primaryStage) {
+    Main.primaryStage = primaryStage;
+  }
+
+  static public Stage getPrimaryStage() {
+    return primaryStage;
   }
 }

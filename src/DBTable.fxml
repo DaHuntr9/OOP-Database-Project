@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" fx:controller="DataBaseTableController" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DataBaseTableController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -52,7 +53,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane  maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
         <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
           <font>
@@ -65,6 +66,9 @@
             <CheckBox fx:id="FirstNameCheckBox" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#selectFirstName" prefHeight="17.0" prefWidth="98.0" text="First Name" />
             <CheckBox fx:id="LastNameCheckBox" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#selectLastName" text="Last Name" />
             <CheckBox fx:id="ShowAll" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#selectAllCheckBoxes" prefHeight="17.0" prefWidth="98.0" text="Show All" />
+            <Button fx:id="addToTableButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#addToTable" text="Add A Value" />
+            <Button fx:id="removeFromTableButton" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#removeFromTable" text="Remove Value" />
+            <Button fx:id="updateButton" layoutX="14.0" layoutY="204.0" mnemonicParsing="false" onAction="#updateTable" text="Update" />
       </children>
     </AnchorPane>
   </children>

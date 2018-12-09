@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addToTableSubmissionController">
+   <children>
+      <JFXTextField fx:id="firstNameTextField" labelFloat="true" layoutX="171.0" layoutY="100.0" prefHeight="25.0" prefWidth="258.0" promptText="First Name" />
+      <JFXTextField fx:id="lastNameTextField" labelFloat="true" layoutX="171.0" layoutY="155.0" prefHeight="25.0" prefWidth="258.0" promptText="Last Name" />
+      <Label fx:id="errorLabel" text="" alignment="CENTER" layoutX="103.0" layoutY="358.0" prefHeight="17.0" prefWidth="394.0" style="-fx-text-fill: #cc0000;" textAlignment="CENTER" />
+      <JFXButton fx:id="submitButton" buttonType="RAISED" layoutX="372.0" layoutY="325.0" onAction="#submitButtonPressed" style="-fx-background-color: #ffffff;" text="Submit" />
+      <Hyperlink fx:id="hyperlink" layoutX="251.0" layoutY="375.0" onAction="#goToTable" text="Return to Table" />
+      <Label fx:id="HeaderLabel" alignment="CENTER" layoutX="-50.0" layoutY="50.0" prefHeight="17.0" prefWidth="700.0" text="Please enter the authors First Name and Last Name to add them from the Database." textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+
+   </children>
+</AnchorPane>
