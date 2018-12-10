@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -94,23 +95,61 @@ public class DataBaseTableController {
   }
 
   @FXML
+  CheckBox AuthorIDCheckBox;
+  @FXML
   private void selectAuthorId(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
+    if(AuthorIDCheckBox.isSelected()==false){
+      tableColumns[0].setVisible(false);
+    }else if(AuthorIDCheckBox.isSelected()==true){
+      tableColumns[0].setVisible(true);
+    }
   }
 
+  @FXML
+  CheckBox FirstNameCheckBox;
   @FXML
   private void selectFirstName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
+    if(FirstNameCheckBox.isSelected()==false){
+      tableColumns[1].setVisible(false);
+    }else if(FirstNameCheckBox.isSelected()==true){
+      tableColumns[1].setVisible(true);
+    }
   }
 
+  @FXML
+  CheckBox LastNameCheckBox;
   @FXML
   private void selectLastName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
+    if(LastNameCheckBox.isSelected()==false){
+      tableColumns[2].setVisible(false);
+    }else if(LastNameCheckBox.isSelected()==true){
+      tableColumns[2].setVisible(true);
+    }
   }
 
   @FXML
+  CheckBox ShowAll;
+  @FXML
   private void selectAllCheckBoxes(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
+    if(ShowAll.isSelected()==false){
+      tableColumns[0].setVisible(false);
+      tableColumns[1].setVisible(false);
+      tableColumns[2].setVisible(false);
+      AuthorIDCheckBox.setSelected(false);
+      LastNameCheckBox.setSelected(false);
+      FirstNameCheckBox.setSelected(false);
+    }else if(ShowAll.isSelected()==true){
+      tableColumns[0].setVisible(true);
+      tableColumns[1].setVisible(true);
+      tableColumns[2].setVisible(true);
+      AuthorIDCheckBox.setSelected(true);
+      LastNameCheckBox.setSelected(true);
+      FirstNameCheckBox.setSelected(true);
+    }
   }
 
   @FXML
