@@ -12,10 +12,10 @@
       <children>
             <TableView fx:id="tableView" layoutX="160.0" prefHeight="400.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </TableView>
-            <CheckBox fx:id="AuthorIDCheckBox" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectAuthorId" prefHeight="17.0" prefWidth="98.0" selected="true" text="Author ID" />
-            <CheckBox fx:id="FirstNameCheckBox" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#selectFirstName" prefHeight="17.0" prefWidth="100.0" selected="true" text="First Name" />
-            <CheckBox fx:id="LastNameCheckBox" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#selectLastName" selected="true" text="Last Name" />
-            <CheckBox fx:id="ShowAll" layoutX="14.0" layoutY="70.0" mnemonicParsing="false" onAction="#selectAllCheckBoxes" prefHeight="17.0" prefWidth="98.0" selected="true" text="Show All" />
+            <CheckBox fx:id="authorIdCheckBox" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectAuthorId" prefHeight="17.0" prefWidth="98.0" selected="true" text="Author ID" />
+            <CheckBox fx:id="firstNameCheckBox" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#selectFirstName" prefHeight="17.0" prefWidth="100.0" selected="true" text="First Name" />
+            <CheckBox fx:id="lastNameCheckBox" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#selectLastName" selected="true" text="Last Name" />
+            <CheckBox fx:id="showAll" layoutX="14.0" layoutY="70.0" mnemonicParsing="false" onAction="#selectAllCheckBoxes" prefHeight="17.0" prefWidth="98.0" selected="true" text="Show All" />
             <Button fx:id="addToTableButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#addToTable" text="Add A Value" />
             <Button fx:id="removeFromTableButton" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#removeFromTable" text="Remove Value" />
             <Button fx:id="updateButton" layoutX="14.0" layoutY="204.0" mnemonicParsing="false" onAction="#updateTable" text="Update" />

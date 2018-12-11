@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -45,6 +44,8 @@ public class DataBaseTableController {
      * The code is provided by Oracle in their Database tutorial in Chapter 24.
      */
     try (
+        //As of right now there is no login system implemented so hardcoding of the password is
+        //necessary to connect tot the database.
         Connection connection = DriverManager.getConnection(databaseUrl, "deitel", "deitel");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(selectQuery)) {
@@ -98,73 +99,77 @@ public class DataBaseTableController {
   }
 
   @FXML
-  CheckBox AuthorIDCheckBox;
+  CheckBox authorIdCheckBox;
+
   @FXML
   private void selectAuthorId(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
-    if(AuthorIDCheckBox.isSelected()==false){
+    if (authorIdCheckBox.isSelected() == false) {
       tableColumns[0].setVisible(false);
-    }else if(AuthorIDCheckBox.isSelected()==true){
+    } else if (authorIdCheckBox.isSelected() == true) {
       tableColumns[0].setVisible(true);
     }
   }
 
   @FXML
-  CheckBox FirstNameCheckBox;
+  CheckBox firstNameCheckBox;
+
   @FXML
   private void selectFirstName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
-    if(FirstNameCheckBox.isSelected()==false){
+    if (firstNameCheckBox.isSelected() == false) {
       tableColumns[1].setVisible(false);
-    }else if(FirstNameCheckBox.isSelected()==true){
+    } else if (firstNameCheckBox.isSelected() == true) {
       tableColumns[1].setVisible(true);
     }
   }
 
   @FXML
-  CheckBox LastNameCheckBox;
+  CheckBox lastNameCheckBox;
+
   @FXML
   private void selectLastName(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
-    if(LastNameCheckBox.isSelected()==false){
+    if (lastNameCheckBox.isSelected() == false) {
       tableColumns[2].setVisible(false);
-    }else if(LastNameCheckBox.isSelected()==true){
+    } else if (lastNameCheckBox.isSelected() == true) {
       tableColumns[2].setVisible(true);
     }
   }
 
   @FXML
-  CheckBox ShowAll;
+  CheckBox showAll;
+
   @FXML
   private void selectAllCheckBoxes(ActionEvent event) throws IOException {
     //Feature coming soon! This space will reserve code to change the viability of the columns.
-    if(ShowAll.isSelected()==false){
+    if (showAll.isSelected() == false) {
       tableColumns[0].setVisible(false);
       tableColumns[1].setVisible(false);
       tableColumns[2].setVisible(false);
-      AuthorIDCheckBox.setSelected(false);
-      LastNameCheckBox.setSelected(false);
-      FirstNameCheckBox.setSelected(false);
-    }else if(ShowAll.isSelected()==true){
+      authorIdCheckBox.setSelected(false);
+      lastNameCheckBox.setSelected(false);
+      firstNameCheckBox.setSelected(false);
+    } else if (showAll.isSelected() == true) {
       tableColumns[0].setVisible(true);
       tableColumns[1].setVisible(true);
       tableColumns[2].setVisible(true);
-      AuthorIDCheckBox.setSelected(true);
-      LastNameCheckBox.setSelected(true);
-      FirstNameCheckBox.setSelected(true);
+      authorIdCheckBox.setSelected(true);
+      lastNameCheckBox.setSelected(true);
+      firstNameCheckBox.setSelected(true);
     }
   }
 
   @FXML
-  private void addToTable (ActionEvent event)throws IOException{
+  private void addToTable(ActionEvent event)throws IOException {
     Stage stage = Main.getPrimaryStage();
-    Parent root = FXMLLoader.load(getClass().getResource("addToTableSubmission.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("AddToTableSubmission.fxml"));
     stage.setScene(new Scene(root, 600, 440));
     stage.show();
   }
 
   @FXML
-  private void updateTable (ActionEvent event)throws IOException {
+  private void updateTable(ActionEvent event)throws IOException {
     String databaseUrl = "jdbc:derby:lib\\books";
     String selectQuery = "SELECT authorID, firstName, lastName FROM authors";
     /**
@@ -175,7 +180,7 @@ public class DataBaseTableController {
         Connection connection = DriverManager.getConnection(databaseUrl, "deitel", "deitel");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(selectQuery)) {
-      if(!tableView.getItems().equals(null)){
+      if (!(tableView.getItems() == null)) {
         tableView.getItems().clear();
       }
       // get ResultSet's meta data
@@ -227,9 +232,9 @@ public class DataBaseTableController {
 
 
   @FXML
-  private void removeFromTable(ActionEvent event)throws IOException{
+  private void removeFromTable(ActionEvent event)throws IOException {
     Stage stage = Main.getPrimaryStage();
-    Parent root = FXMLLoader.load(getClass().getResource("removeFromTableSubmission.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("RemoveFromTableSubmission.fxml"));
     stage.setScene(new Scene(root, 600, 440));
     stage.show();
   }

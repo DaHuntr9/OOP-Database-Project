@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <?import javafx.scene.control.Button?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addToTableSubmissionController" stylesheets="JFXpages.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddToTableSubmissionController" stylesheets="JFXpages.css">
    <children>
       <JFXTextField fx:id="firstNameTextField" labelFloat="true" layoutX="171.0" layoutY="100.0" prefHeight="25.0" prefWidth="258.0" promptText="First Name" />
       <JFXTextField fx:id="lastNameTextField" labelFloat="true" layoutX="171.0" layoutY="155.0" prefHeight="25.0" prefWidth="258.0" promptText="Last Name" />
