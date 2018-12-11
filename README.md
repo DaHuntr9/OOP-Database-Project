@@ -12,7 +12,7 @@ When designing this program I chose to simplify the programs UI inorder to ensur
 This project need to have the derby.jar and jfoenix-8.0.7.jar included in the project structure. (derby.jar and jfoenix-8.0.7.jar is located in the lib folder.) 
 
 
-# V1.1 <br>
+# V1.0 <br>
 Outputs Data to GUI only for Author based information. <br>
 Files Included:<br>
 src(Folder)<br>
