@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -17,7 +18,7 @@ import javafx.scene.control.Label;
 public class removeFromTableSubmissionController {
 
   @FXML
-  JFXButton submitButton;
+  Button submitButton;
   @FXML
   JFXTextField firstNameTextField;
   @FXML

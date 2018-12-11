@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../IDEs/InteleJ/Java Libraries/jfoenix-8.0.7.jar!/" />
+          <root url="jar://$USER_HOME$/OneDrive - Florida Gulf Coast University/IDEs/InteleJ/Java Libraries/jfoenix-8.0.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
