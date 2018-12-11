@@ -2,6 +2,8 @@
 This is the GUI Database Project for my OOP Class. It is used to demonstrate the skills learned in this course.<br>
 This project uses a SQL database called books (this is located in the lib folder).<br>
 
+![](https://i.imgur.com/Bq4jkKW.gif)
+
 #Important Notes
 This project need to have the derby.jar included in the project structure. (derby.jar is located in the lib folder.) 
 
