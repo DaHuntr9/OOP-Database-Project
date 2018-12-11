@@ -2,7 +2,7 @@
 This is the GUI Database Project for my OOP Class. It is used to demonstrate the skills learned in this course.<br>
 This project uses a SQL database called books (this is located in the lib folder).<br>
 <br>
-#GUI Design Principles:<br>
+# GUI Design Principles:<br>
 When designing this program I chose to simplify the programs UI inorder to ensure clarity and a clean asthetic. This Database project allowed me to have multiple pages which tells the users what they need to do in order to complete the action. Removal and addition to the database were given unique pages inorder to ensure that the user does not accidentally select the wrong function and delete a data point that already exists. I included input sanitation to ensure that the user fills out all feilds and does not leave feilds empty. Exceptions are also caught to prevent the application from crashing and prompts the user with error labels inorder to guide the user as to how fix the problem. 
 <br>
 <br>
