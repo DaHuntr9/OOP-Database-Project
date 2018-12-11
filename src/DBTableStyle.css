@@ -75,7 +75,7 @@
 }
 
 .table-view .column-header, .table-view .filler {
-  -fx-size: 35;
+  -fx-size: 23;
   -fx-border-width: 0 0 1 0;
   -fx-background-color: transparent;
   -fx-border-color:

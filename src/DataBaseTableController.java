@@ -87,6 +87,9 @@ public class DataBaseTableController {
       tableColumns[1].setCellValueFactory(new PropertyValueFactory<>("firstName"));
       tableColumns[2].setCellValueFactory(new PropertyValueFactory<>("lastName"));
       //this sets the Table's items to the observableList Array list and allows you to see them.
+      tableColumns[0].prefWidthProperty().bind(tableView.widthProperty().divide(3));
+      tableColumns[1].prefWidthProperty().bind(tableView.widthProperty().divide(3));
+      tableColumns[2].prefWidthProperty().bind(tableView.widthProperty().divide(3));
       tableView.setItems(observableList);
     } catch (SQLException sqlException) {
       //prints the SQL exception.
@@ -215,6 +218,7 @@ public class DataBaseTableController {
       tableColumns[2].setCellValueFactory(new PropertyValueFactory<>("lastName"));
       //this sets the Table's items to the observableList Array list and allows you to see them.
       tableView.setItems(observableList);
+
     } catch (SQLException sqlException) {
       //prints the SQL exception.
       sqlException.printStackTrace();

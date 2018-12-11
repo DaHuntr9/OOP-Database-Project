@@ -1,3 +1,21 @@
+.jfx-text-field
+{
+  -jfx-focus-color: #d8d8d8;
+  /*-jfx-unfocus-color: #fffd8c; doesn't work*/
+}
+
+.text-field
+{
+  -fx-prompt-text-fill: #d8d8d8; /*Yellow - floating label*/
+  -fx-text-fill: #d8d8d8; /*Yellow - input color*/
+  -fx-highlight-fill: #000000; /*Green*/
+}
+
+.text-field .input-line
+{
+  -fx-background-color: #000000; /*Yellow - bottom bar*/
+}
+
 .button {
   -fx-padding: 5 22 5 22;
   -fx-border-color: #e2e2e2;
